@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GestionAbogados</string>
+    <string name="btn_ingresar">INGRESAR</string>string>
+    <string name="btn_ubBufete">UBIC. BUFETE</string>string>
+    <string name="btn_ubActual">UBIC. ACTUAL</string>string>
+    <string name="btn_eliminar">ELIMINAR</string>string>
+    <string name="btn_listar">LISTAR</string>
+    <string name="title_activity_maps">MapsActivity</string>string>
+</resources>

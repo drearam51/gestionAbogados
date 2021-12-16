@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="strEspecial">
+        <item>Penal</item>
+        <item>Familia</item>
+        <item>Civil</item>
+        <item>Laboral</item>
+    </string-array>
+</resources>
