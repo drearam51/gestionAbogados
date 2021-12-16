@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent3);
                 break;
             case R.id.btnUbicActual:Toast.makeText(MainActivity.this,"Ver Ubicación Bufete", Toast.LENGTH_SHORT).show();
-                Intent intent4 = new Intent(this, MapsActivity.class);
+                Intent intent4 = new Intent(this, MapsActivity2.class);
                 intent4.putExtra("tipoMapa","actual");
                 startActivity(intent4);
                 break;

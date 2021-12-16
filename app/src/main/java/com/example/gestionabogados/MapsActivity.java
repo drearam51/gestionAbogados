@@ -19,6 +19,28 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.gestionabogados.databinding.ActivityMapsBinding;
 import com.google.android.gms.tasks.OnSuccessListener;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.LocationSettingsRequest;
+import com.google.android.gms.location.LocationSettingsResult;
+import com.google.android.gms.location.LocationSettingsStates;
+import com.google.android.gms.location.LocationSettingsStatusCodes;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -83,7 +105,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     /*LatLng Actual = new LatLng(location.getLongitude(), location.getLatitude());
                     mMap.addMarker(new MarkerOptions().position(Actual).title("Finapp in Bogotá"));*/
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(location.getLongitude(), location.getLatitude())));
-                    mMap.animateCamera(CameraUpdateFactory.zoomTo(20), 3000, null);
+                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLongitude(), location.getLatitude()), 20), 3000, null);
                 }
             });
         }
